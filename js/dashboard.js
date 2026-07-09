@@ -1,1 +1,1 @@
-console.log("Dashboard Loaded");
+console.log("Dashboard Loaded Successfully");
