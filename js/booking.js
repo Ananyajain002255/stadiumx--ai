@@ -106,10 +106,16 @@ bookBtn.addEventListener("click",function(){
 
     }
 
-    alert(
-        "🎉 Booking Successful!\n\n" +
-        "Seats: " + seatNumbers.innerHTML +
-        "\nTotal Price: ₹" + price.innerHTML
-    );
+    document.getElementById("ticketSeats").innerHTML = seatNumbers.innerHTML;
+
+    document.getElementById("ticketPrice").innerHTML = price.innerHTML;
+
+    document.getElementById("ticketPopup").style.display = "flex";
 
 });
+
+function closePopup(){
+
+    document.getElementById("ticketPopup").style.display = "none";
+
+}
