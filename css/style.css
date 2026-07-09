@@ -202,3 +202,38 @@ font-size:140px;
 box-shadow:0 0 80px #00E5FF;
 
 }
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:60px 80px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:220px;
+    padding:30px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(0,229,255,0.4);
+}
+
+.card h2{
+    font-size:40px;
+    color:#00E5FF;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#d1d5db;
+    font-size:18px;
+}
