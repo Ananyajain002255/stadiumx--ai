@@ -1,3 +1,4 @@
+alert("Booking JS Loaded");
 const seatsContainer = document.getElementById("seats");
 const count = document.getElementById("count");
 const price = document.getElementById("price");
