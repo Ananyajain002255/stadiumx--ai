@@ -16,6 +16,16 @@ rows.forEach(row => {
 
         seat.className = "seat";
 
+if(row==="A"){
+    seat.classList.add("vip");
+}
+else if(row==="B" || row==="C"){
+    seat.classList.add("premium");
+}
+else{
+    seat.classList.add("normal");
+}
+
         seat.dataset.seat = row + i;
 
         seat.innerHTML = row + i;
@@ -36,21 +46,33 @@ rows.forEach(row => {
 
 function updateBooking(){
 
-    const selectedSeats = document.querySelectorAll(".seat.selected");
+    const selectedSeats=document.querySelectorAll(".seat.selected");
 
-    count.innerHTML = selectedSeats.length;
+    let total=0;
 
-    price.innerHTML = selectedSeats.length * seatPrice;
-
-    let seatList = [];
+    let seatList=[];
 
     selectedSeats.forEach(function(seat){
 
         seatList.push(seat.dataset.seat);
 
+        if(seat.classList.contains("vip")){
+            total+=1000;
+        }
+        else if(seat.classList.contains("premium")){
+            total+=750;
+        }
+        else{
+            total+=500;
+        }
+
     });
 
-    seatNumbers.innerHTML = seatList.length ? seatList.join(", ") : "None";
+    count.innerHTML=selectedSeats.length;
+
+    price.innerHTML=total;
+
+    seatNumbers.innerHTML=seatList.length?seatList.join(", "):"None";
 
 }
 
