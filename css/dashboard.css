@@ -85,3 +85,30 @@ font-size:40px;
 color:#00E5FF;
 margin-bottom:15px;
 }
+
+.recent-matches{
+    margin-top:50px;
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:20px;
+}
+
+.recent-matches h2{
+    margin-bottom:20px;
+    color:#00E5FF;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:15px;
+    text-align:left;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+th{
+    color:#00E5FF;
+}
