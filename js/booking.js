@@ -14,7 +14,6 @@ const price = document.getElementById("price");
 const seatNumbers = document.getElementById("seatNumbers");
 const bookBtn = document.getElementById("bookBtn");
 
-const seatPrice = 500;
 
 const rows = ["A","B","C","D","E","F"];
 
@@ -129,6 +128,8 @@ aiBtn.addEventListener("click", function(){
 
     const seats = document.querySelectorAll(".seat");
 
+    let found = false;
+
     for(let seat of seats){
 
         if(
@@ -150,15 +151,27 @@ aiBtn.addEventListener("click", function(){
                 "✔ Less Crowd"
             );
 
+            found = true;
+
             break;
+
         }
+
+    }
+
+    if(!found){
+
+        alert("No seats available!");
 
     }
 
 });
 
 document.getElementById("downloadBtn").addEventListener("click", function(){
-
+ if(document.getElementById("ticketId").innerHTML === ""){
+        alert("Please book your ticket first.");
+        return;
+    }
     const ticket =
 `🎟 STADIUMX AI TICKET
 
@@ -181,5 +194,7 @@ Thank You For Booking!`;
     link.download = "StadiumX_Ticket.txt";
 
     link.click();
+
+    URL.revokeObjectURL(link.href);
 
 });
