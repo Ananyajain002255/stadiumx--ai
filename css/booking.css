@@ -206,3 +206,16 @@ button:hover{
 #aiBtn:hover{
     background:#7C3AED;
 }
+
+.qr-box{
+    width:140px;
+    height:140px;
+    margin:20px auto;
+    background:white;
+    color:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    font-weight:bold;
+}
