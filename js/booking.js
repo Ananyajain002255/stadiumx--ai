@@ -106,6 +106,10 @@ bookBtn.addEventListener("click",function(){
 
     }
 
+    const ticketId = "STX-" + Math.floor(10000 + Math.random() * 90000);
+
+document.getElementById("ticketId").innerHTML = ticketId;
+
     document.getElementById("ticketSeats").innerHTML = seatNumbers.innerHTML;
 
     document.getElementById("ticketPrice").innerHTML = price.innerHTML;
