@@ -1,1 +1,78 @@
-/* Login Page CSS */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#050816;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:white;
+    overflow:hidden;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    background:radial-gradient(circle at top,#0ea5e9,#050816 70%);
+    z-index:-1;
+}
+
+.login-container{
+    width:400px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    padding:40px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.15);
+    text-align:center;
+}
+
+.login-container h1{
+    color:#00E5FF;
+    margin-bottom:10px;
+}
+
+.login-container p{
+    margin-bottom:25px;
+    color:#cbd5e1;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+input{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#00E5FF;
+    color:#000;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+.signup a{
+    color:#00E5FF;
+    text-decoration:none;
+}
