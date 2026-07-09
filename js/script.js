@@ -1,1 +1,1 @@
-console.log("StadiumX AI Loaded");
+console.log("Welcome to StadiumX AI");
