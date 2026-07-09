@@ -119,3 +119,36 @@ function closePopup(){
     document.getElementById("ticketPopup").style.display = "none";
 
 }
+const aiBtn = document.getElementById("aiBtn");
+
+aiBtn.addEventListener("click", function(){
+
+    const seats = document.querySelectorAll(".seat");
+
+    for(let seat of seats){
+
+        if(
+            !seat.classList.contains("booked") &&
+            !seat.classList.contains("selected")
+        ){
+
+            seat.classList.add("selected");
+
+            updateBooking();
+
+            alert(
+                "🤖 AI Recommendation\n\n" +
+                "Recommended Seat : " +
+                seat.dataset.seat +
+                "\nReason:\n" +
+                "✔ Best Visibility\n" +
+                "✔ Near Exit\n" +
+                "✔ Less Crowd"
+            );
+
+            break;
+        }
+
+    }
+
+});
