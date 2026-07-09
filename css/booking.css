@@ -96,6 +96,10 @@ header p{
     opacity:0.6;
 }
 
+.seat.booked:hover{
+    transform:none;
+}
+
 .legend{
     display:flex;
     justify-content:center;
