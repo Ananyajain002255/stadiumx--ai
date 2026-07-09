@@ -156,3 +156,30 @@ aiBtn.addEventListener("click", function(){
     }
 
 });
+
+document.getElementById("downloadBtn").addEventListener("click", function(){
+
+    const ticket =
+`🎟 STADIUMX AI TICKET
+
+Ticket ID : ${document.getElementById("ticketId").innerHTML}
+
+Match : India vs Australia
+
+Seats : ${seatNumbers.innerHTML}
+
+Total Price : ₹${price.innerHTML}
+
+Thank You For Booking!`;
+
+    const blob = new Blob([ticket], { type: "text/plain" });
+
+    const link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+
+    link.download = "StadiumX_Ticket.txt";
+
+    link.click();
+
+});
