@@ -1,3 +1,13 @@
+const bookedSeats=[
+"A2",
+"A5",
+"B3",
+"B7",
+"C4",
+"D6",
+"E2",
+"F8"
+];
 const seatsContainer = document.getElementById("seats");
 const count = document.getElementById("count");
 const price = document.getElementById("price");
@@ -28,9 +38,17 @@ else{
 
         seat.dataset.seat = row + i;
 
+        if(bookedSeats.includes(row+i)){
+    seat.classList.add("booked");
+}
+
         seat.innerHTML = row + i;
 
         seat.addEventListener("click",function(){
+
+            if(seat.classList.contains("booked")){
+    return;
+}
 
             seat.classList.toggle("selected");
 
