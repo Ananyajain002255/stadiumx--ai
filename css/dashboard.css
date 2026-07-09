@@ -1,1 +1,87 @@
-/* Dashboard CSS */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+display:flex;
+background:#050816;
+color:white;
+}
+
+.sidebar{
+width:250px;
+min-height:100vh;
+background:#0f172a;
+padding:30px;
+}
+
+.sidebar h2{
+color:#00E5FF;
+margin-bottom:40px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+margin:20px 0;
+}
+
+.sidebar a{
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:.3s;
+}
+
+.sidebar a:hover{
+color:#00E5FF;
+}
+
+.main{
+flex:1;
+padding:40px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+}
+
+.profile{
+background:#2563EB;
+padding:12px 25px;
+border-radius:30px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00E5FF;
+}
+
+.card h2{
+font-size:40px;
+color:#00E5FF;
+margin-bottom:15px;
+}
