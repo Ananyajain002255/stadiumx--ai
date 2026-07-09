@@ -196,3 +196,13 @@ button:hover{
 .popup-content button{
     margin-top:20px;
 }
+
+#aiBtn{
+    margin-top:15px;
+    background:#8B5CF6;
+    color:white;
+}
+
+#aiBtn:hover{
+    background:#7C3AED;
+}
