@@ -1,52 +1,75 @@
-alert("Booking JS Loaded");
 const seatsContainer = document.getElementById("seats");
 const count = document.getElementById("count");
 const price = document.getElementById("price");
+const seatNumbers = document.getElementById("seatNumbers");
+const bookBtn = document.getElementById("bookBtn");
 
 const seatPrice = 500;
 
-for(let i=1;i<=48;i++){
+const rows = ["A","B","C","D","E","F"];
 
-    const seat=document.createElement("div");
+rows.forEach(row => {
 
-    seat.classList.add("seat");
+    for(let i=1;i<=8;i++){
 
-    seat.innerHTML=i;
+        const seat = document.createElement("div");
 
-    seat.addEventListener("click",()=>{
+        seat.className = "seat";
 
-        seat.classList.toggle("selected");
+        seat.dataset.seat = row + i;
 
-        updateBooking();
+        seat.innerHTML = row + i;
 
-    });
+        seat.addEventListener("click",function(){
 
-    seatsContainer.appendChild(seat);
+            seat.classList.toggle("selected");
 
-}
+            updateBooking();
+
+        });
+
+        seatsContainer.appendChild(seat);
+
+    }
+
+});
 
 function updateBooking(){
 
-    const selected=document.querySelectorAll(".selected");
+    const selectedSeats = document.querySelectorAll(".seat.selected");
 
-    count.innerHTML=selected.length;
+    count.innerHTML = selectedSeats.length;
 
-    price.innerHTML=selected.length*seatPrice;
+    price.innerHTML = selectedSeats.length * seatPrice;
+
+    let seatList = [];
+
+    selectedSeats.forEach(function(seat){
+
+        seatList.push(seat.dataset.seat);
+
+    });
+
+    seatNumbers.innerHTML = seatList.length ? seatList.join(", ") : "None";
 
 }
 
-document.getElementById("bookBtn").addEventListener("click",()=>{
+bookBtn.addEventListener("click",function(){
 
-    if(count.innerHTML==0){
+    const totalSeats = Number(count.innerHTML);
 
-        alert("Please Select At Least One Seat");
+    if(totalSeats===0){
 
-    }
+        alert("Please select at least one seat.");
 
-    else{
-
-        alert("Booking Successful!");
+        return;
 
     }
+
+    alert(
+        "🎉 Booking Successful!\n\n" +
+        "Seats: " + seatNumbers.innerHTML +
+        "\nTotal Price: ₹" + price.innerHTML
+    );
 
 });
