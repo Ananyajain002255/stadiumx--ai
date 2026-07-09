@@ -219,3 +219,13 @@ button:hover{
     border-radius:10px;
     font-weight:bold;
 }
+
+#downloadBtn{
+    background:#22c55e;
+    color:white;
+    margin-bottom:10px;
+}
+
+#downloadBtn:hover{
+    background:#16a34a;
+}
