@@ -5,7 +5,123 @@
 }
 
 body{
-    background:#08111F;
+
+    font-family:'Poppins',sans-serif;
+
+    background:#050816;
+
     color:white;
-    font-family:Arial,sans-serif;
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 80px;
+
+    background:#0F172A;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#38BDF8;
+
+}
+
+.navbar ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:#38BDF8;
+
+}
+
+.hero{
+
+    height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    line-height:35px;
+
+    color:#CBD5E1;
+
+    margin-bottom:35px;
+
+}
+
+button{
+
+    padding:18px 40px;
+
+    background:#2563EB;
+
+    border:none;
+
+    color:white;
+
+    font-size:18px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
 }
