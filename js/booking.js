@@ -51,6 +51,12 @@ else{
 
             seat.classList.toggle("selected");
 
+            seat.style.transform="scale(.9)";
+
+setTimeout(()=>{
+    seat.style.transform="scale(1)";
+},150);
+
             updateBooking();
 
         });
@@ -157,6 +163,7 @@ function closePopup(){
 
     bookBtn.disabled = false;
     bookBtn.innerHTML = "Book Ticket";
+    updateBooking();
 
 }
 const aiBtn = document.getElementById("aiBtn");
@@ -176,7 +183,9 @@ const preferredSeat = availableSeats.find(seat =>
 
 const seat = preferredSeat || availableSeats[0];
     
-   seat.classList.add("selected");
+  if(!seat.classList.contains("selected")){
+    seat.classList.add("selected");
+}
 
 updateBooking();
 
@@ -234,6 +243,8 @@ document.body.removeChild(link);
 setTimeout(() => {
     URL.revokeObjectURL(link.href);
 },100);
+
+    alert("✅ Ticket Downloaded Successfully!");
 
 });
 
