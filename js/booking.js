@@ -255,3 +255,22 @@ document.addEventListener("keydown",function(e){
     }
 
 });
+
+// ===========================
+// Dark Light Mode
+// ===========================
+
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click",function(){
+
+    document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+        themeBtn.innerHTML="☀ Light Mode";
+    }
+    else{
+        themeBtn.innerHTML="🌙 Dark Mode";
+    }
+
+});
