@@ -332,6 +332,7 @@ button:hover{
     background:#FFD700;
     color:black;
     font-weight:bold;
+     z-index:1001;
 }
 
 @media(max-width:768px){
@@ -379,4 +380,14 @@ body.light .seat-title{
 
 body.light .popup-content{
     background:#ffffff;
+}
+
+.thank-you{
+    margin-top:15px;
+    color:#16a34a;
+    font-weight:bold;
+    font-size:16px;
+}
+body.light .popup-content{
+    border-color:#60A5FA;
 }
