@@ -153,6 +153,14 @@ bookBtn.innerHTML = "Booked ✅";
     
 updateBooking();
 
+    let totalTickets = Number(localStorage.getItem("totalTickets")) || 0;
+totalTickets++;
+localStorage.setItem("totalTickets", totalTickets);
+
+let totalRevenue = Number(localStorage.getItem("totalRevenue")) || 0;
+totalRevenue += Number(price.innerHTML);
+localStorage.setItem("totalRevenue", totalRevenue);
+    
     document.getElementById("ticketPopup").style.display = "flex";
 
 });
