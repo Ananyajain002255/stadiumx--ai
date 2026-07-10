@@ -316,3 +316,31 @@ button:hover{
         font-size:30px;
     }
 }
+
+#themeBtn{
+    position:absolute;
+    top:30px;
+    right:30px;
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#FFD700;
+    color:black;
+    font-weight:bold;
+}
+
+body.light{
+    background:#f4f4f4;
+    color:#111;
+}
+
+body.light .match-card,
+body.light .summary{
+    background:white;
+    color:#111;
+}
+
+body.light header p{
+    color:#444;
+}
