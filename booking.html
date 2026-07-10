@@ -88,41 +88,18 @@ Booking Summary
 </h2>
 
 <p>
-
-Selected Seats
-
-<span id="seatNumbers">
-
-None
-
-</span>
-
+<strong>Selected Seats:</strong>
+<span id="seatNumbers">None</span>
 </p>
 
 <p>
-
-Total Seats
-
-<span id="count">
-
-0
-
-</span>
-
+    <strong>Total Seats:</strong>
+    <span id="count">0</span>
 </p>
-
+  
 <p>
-
-Total Price
-
-₹
-
-<span id="price">
-
-0
-
-</span>
-
+    <strong>Total Price:</strong>
+    ₹<span id="price">0</span>
 </p>
 
 <button id="bookBtn">
@@ -145,17 +122,27 @@ Book Ticket
 
         <h2>🎉 Booking Successful</h2>
 
-        <h3>StadiumX AI Ticket</h3>
+        <h3>🏟 StadiumX AI Ticket</h3>
 
         <p><strong>Ticket ID:</strong> <span id="ticketId"></span></p>
 
-        <p><strong>Match:</strong> India vs Australia</p>
+        <p><strong>Match:</strong> India 🇮🇳 vs Australia 🇦🇺</p>
 
         <p><strong>Seats:</strong> <span id="ticketSeats"></span></p>
 
         <p><strong>Total Price:</strong> ₹<span id="ticketPrice"></span></p>
 
-        <button onclick="closePopup()">Close</button>
+        <div class="qr-box">
+            📱 QR CODE
+        </div>
+
+        <button id="downloadBtn">
+            ⬇ Download Ticket
+        </button>
+
+        <button onclick="closePopup()">
+            Close
+        </button>
 
     </div>
 
