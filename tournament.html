@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tournament Manager</title>
+
+<link rel="stylesheet" href="css/tournament.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🏆 Tournament Manager</h1>
+
+<p>Create and Manage Stadium Tournaments</p>
+
+</header>
+
+<div class="container">
+
+    <div class="form-card">
+
+        <h2>Create Tournament</h2>
+
+        <input
+        type="text"
+        id="tournamentName"
+        placeholder="Tournament Name">
+
+        <input
+        type="text"
+        id="venue"
+        placeholder="Venue">
+
+        <input
+        type="date"
+        id="date">
+
+        <input
+        type="number"
+        id="teams"
+        placeholder="Number of Teams">
+
+        <button id="createBtn">
+            ➕ Create Tournament
+        </button>
+
+    </div>
+
+    <div class="table-card">
+
+        <h2>Tournament List</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+
+                    <th>Venue</th>
+
+                    <th>Date</th>
+
+                    <th>Teams</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tournamentTable">
+
+                <!-- JavaScript will insert rows here -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/tournament.js"></script>
+
+</body>
+</html>
