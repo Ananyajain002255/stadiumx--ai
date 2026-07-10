@@ -42,7 +42,7 @@ header p{
     border:1px solid rgba(255,255,255,.1);
     box-shadow:0 10px 25px rgba(0,0,0,.3);
     margin-bottom:35px;
-    transition:.3s;
+    transition:all .3s ease;
 }
 
 .form-card:hover,
@@ -67,6 +67,11 @@ input{
     font-size:16px;
 }
 
+input:focus{
+    border:2px solid #00E5FF;
+    box-shadow:0 0 12px rgba(0,229,255,.5);
+}
+
 button{
     width:100%;
     padding:15px;
@@ -78,7 +83,7 @@ button{
     font-size:18px;
     font-weight:bold;
     cursor:pointer;
-    transition:.3s;
+    transition:all .3s ease;
 }
 
 button:hover{
@@ -86,10 +91,15 @@ button:hover{
     box-shadow:0 10px 20px rgba(0,229,255,.35);
 }
 
+button:active{
+    transform:scale(.97);
+}
+
 table{
     width:100%;
     border-collapse:collapse;
     text-align:center;
+    min-width:700px;
 }
 
 th{
@@ -100,6 +110,10 @@ th{
 td{
     padding:15px;
     border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+tbody tr:hover{
+    background:rgba(255,255,255,.08);
 }
 
 .deleteBtn{
@@ -113,6 +127,7 @@ td{
 
 .deleteBtn:hover{
     background:#dc2626;
+    transform:scale(1.05);
 }
 
 .upcoming{
@@ -128,21 +143,4 @@ td{
 .finished{
     color:#ef4444;
     font-weight:bold;
-}
-
-@media(max-width:768px){
-
-    body{
-        padding:20px;
-    }
-
-    table{
-        display:block;
-        overflow-x:auto;
-    }
-
-    header h1{
-        font-size:30px;
-    }
-
 }
