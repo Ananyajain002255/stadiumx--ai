@@ -99,11 +99,17 @@ bookBtn.addEventListener("click",function(){
 
     if(totalSeats===0){
 
-        alert("Please select at least one seat.");
+    alert("Please select at least one seat.");
 
-        return;
+    return;
 
-    }
+}
+
+const confirmBooking = confirm("Are you sure you want to book these seats?");
+
+if(!confirmBooking){
+    return;
+}
 
     const ticketId = "STX-" + Math.floor(10000 + Math.random() * 90000);
 
@@ -126,8 +132,19 @@ document.getElementById("ticketGate").innerHTML =
     document.querySelectorAll(".seat.selected").forEach(seat => {
     seat.classList.remove("selected");
     seat.classList.add("booked");
+
+    seat.style.transform = "scale(0.95)";
+
+    setTimeout(() => {
+        seat.style.transform = "scale(1)";
+    },150);
+
+    bookedSeats.push(seat.dataset.seat);
 });
 
+    bookBtn.disabled = true;
+bookBtn.innerHTML = "Booked ✅";
+    
 updateBooking();
 
     document.getElementById("ticketPopup").style.display = "flex";
@@ -137,6 +154,9 @@ updateBooking();
 function closePopup(){
 
     document.getElementById("ticketPopup").style.display = "none";
+
+    bookBtn.disabled = false;
+    bookBtn.innerHTML = "Book Ticket";
 
 }
 const aiBtn = document.getElementById("aiBtn");
@@ -150,7 +170,11 @@ if(availableSeats.length === 0){
     return;
 }
 
-const seat = availableSeats[Math.floor(availableSeats.length/2)];
+const preferredSeat = availableSeats.find(seat =>
+    seat.classList.contains("premium")
+);
+
+const seat = preferredSeat || availableSeats[0];
     
    seat.classList.add("selected");
 
@@ -196,10 +220,38 @@ Thank You For Booking!`;
 
     link.href = URL.createObjectURL(blob);
 
-    link.download = "StadiumX_Ticket.txt";
+    link.download =
+"Ticket_" +
+document.getElementById("ticketId").innerHTML +
+".txt";
 
-    link.click();
+   document.body.appendChild(link);
 
+link.click();
+
+document.body.removeChild(link);
+
+setTimeout(() => {
     URL.revokeObjectURL(link.href);
+},100);
+
+});
+
+window.onclick = function(event){
+
+    if(event.target === document.getElementById("ticketPopup")){
+
+        closePopup();
+
+    }
+
+}
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="Escape"){
+
+        closePopup();
+
+    }
 
 });
