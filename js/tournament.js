@@ -7,6 +7,75 @@ const createBtn = document.getElementById("createBtn");
 const table = document.getElementById("tournamentTable");
 
 let tournaments = JSON.parse(localStorage.getItem("tournaments")) || [];
+displayTournaments();
+
+createBtn.addEventListener("click", function(){
+
+    if(
+        tournamentName.value === "" ||
+        venue.value === "" ||
+        date.value === "" ||
+        teams.value === ""
+    ){
+        alert("Please fill all fields.");
+        return;
+    }
+    const tournament = {
+    name: tournamentName.value,
+    venue: venue.value,
+    date: date.value,
+    teams: teams.value,
+    status: "Upcoming"
+};
+
+tournaments.push(tournament);
+localStorage.setItem("tournaments", JSON.stringify(tournaments));
+displayTournaments();
+
+console.log(tournaments);
+
+});
+
+function displayTournaments(){
+
+    tournamentTable.innerHTML = "";
+
+    tournaments.forEach(function(tournament,index){
+
+        tournamentTable.innerHTML += `
+        <tr>
+            <td>${tournament.name}</td>
+            <td>${tournament.venue}</td>
+            <td>${tournament.date}</td>
+            <td>${tournament.teams}</td>
+            <td class="upcoming">${tournament.status}</td>
+            <td>
+                <button class="deleteBtn" onclick="deleteTournament(${index})">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        `;
+
+    });
+
+}
+
+function deleteTournament(index){
+
+    const confirmDelete = confirm("Are you sure you want to delete this tournament?");
+
+    if(!confirmDelete){
+        return;
+    }
+
+    tournaments.splice(index,1);
+    localStorage.setItem("tournaments", JSON.stringify(tournaments));
+    displayTournaments();
+
+}
+
+let tournaments = JSON.parse(localStorage.getItem("tournaments")) || [];
 
 renderTable();
 
