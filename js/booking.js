@@ -113,6 +113,23 @@ document.getElementById("ticketId").innerHTML = ticketId;
 
     document.getElementById("ticketPrice").innerHTML = price.innerHTML;
 
+    const now = new Date();
+
+document.getElementById("ticketTime").innerHTML =
+now.toLocaleString();
+
+const gate = Math.floor(Math.random() * 8) + 1;
+
+document.getElementById("ticketGate").innerHTML =
+"Gate " + gate;
+    
+    document.querySelectorAll(".seat.selected").forEach(seat => {
+    seat.classList.remove("selected");
+    seat.classList.add("booked");
+});
+
+updateBooking();
+
     document.getElementById("ticketPopup").style.display = "flex";
 
 });
@@ -126,44 +143,27 @@ const aiBtn = document.getElementById("aiBtn");
 
 aiBtn.addEventListener("click", function(){
 
-    const seats = document.querySelectorAll(".seat");
+    const availableSeats = [...document.querySelectorAll(".seat:not(.booked):not(.selected)")];
 
-    let found = false;
+if(availableSeats.length === 0){
+    alert("No seats available!");
+    return;
+}
 
-    for(let seat of seats){
+const seat = availableSeats[Math.floor(availableSeats.length/2)];
+    
+   seat.classList.add("selected");
 
-        if(
-            !seat.classList.contains("booked") &&
-            !seat.classList.contains("selected")
-        ){
+updateBooking();
 
-            seat.classList.add("selected");
-
-            updateBooking();
-
-            alert(
-                "🤖 AI Recommendation\n\n" +
-                "Recommended Seat : " +
-                seat.dataset.seat +
-                "\nReason:\n" +
-                "✔ Best Visibility\n" +
-                "✔ Near Exit\n" +
-                "✔ Less Crowd"
-            );
-
-            found = true;
-
-            break;
-
-        }
-
-    }
-
-    if(!found){
-
-        alert("No seats available!");
-
-    }
+alert(
+"🤖 AI Recommendation\n\n" +
+"Recommended Seat : " + seat.dataset.seat +
+"\nReason:\n" +
+"✔ Best Visibility\n" +
+"✔ Near Exit\n" +
+"✔ Less Crowd"
+);
 
 });
 
@@ -172,16 +172,21 @@ document.getElementById("downloadBtn").addEventListener("click", function(){
         alert("Please book your ticket first.");
         return;
     }
-    const ticket =
+
+   const ticket =
 `🎟 STADIUMX AI TICKET
 
 Ticket ID : ${document.getElementById("ticketId").innerHTML}
 
 Match : India vs Australia
 
-Seats : ${seatNumbers.innerHTML}
+Seats : ${document.getElementById("ticketSeats").innerHTML}
 
-Total Price : ₹${price.innerHTML}
+Total Price : ₹${document.getElementById("ticketPrice").innerHTML}
+
+Booking Time : ${document.getElementById("ticketTime").innerHTML}
+
+Entry Gate : ${document.getElementById("ticketGate").innerHTML}
 
 Thank You For Booking!`;
 
