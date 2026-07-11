@@ -59,10 +59,25 @@ backdrop-filter:blur(15px);
 margin-bottom:40px;
 }
 
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
 .topbar-right{
 display:flex;
 align-items:center;
 gap:20px;
+}
+
+#clock{
+    font-size:20px;
+    font-weight:bold;
+    color:#00E5FF;
+    background:rgba(255,255,255,.08);
+    padding:10px 20px;
+    border-radius:12px;
 }
 
 .profile{
@@ -236,10 +251,154 @@ body.light #themeBtn{
     color:white;
 }
 
+body.light .occupancy,
+body.light .notification-panel,
+body.light .chart-card,
+body.light .recent-matches{
+    background:white;
+    color:#111;
+}
+
+body.light .prediction-card,
+body.light .weather-card{
+    color:white;
+}
+
+body.light footer{
+    color:#333;
+}
+
 body,
 .sidebar,
 .card,
 .recent-matches,
 .topbar{
 transition:.4s;
+}
+
+/* ===========================
+   Occupancy
+=========================== */
+
+.occupancy{
+    margin-top:40px;
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:20px;
+    backdrop-filter:blur(15px);
+}
+
+.occupancy h2{
+    margin-bottom:20px;
+    color:#00E5FF;
+}
+
+.progress{
+    width:100%;
+    height:28px;
+    background:#333;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#00E5FF,#2563EB);
+    text-align:center;
+    line-height:28px;
+    font-weight:bold;
+    transition:1s;
+}
+
+.prediction-card{
+    margin-top:30px;
+    background:linear-gradient(135deg,#2563EB,#00E5FF);
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+}
+
+.prediction-card h2{
+    margin-bottom:15px;
+}
+
+.notification-panel{
+    margin-top:30px;
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:20px;
+}
+
+.notification-panel h2{
+    color:#00E5FF;
+    margin-bottom:20px;
+}
+
+.notification-panel ul{
+    padding-left:20px;
+}
+
+.notification-panel li{
+    margin:12px 0;
+}
+
+.quick-actions{
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.quick-actions button{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#2563EB;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.quick-actions button:hover{
+    background:#00E5FF;
+    color:black;
+}
+
+.chart-card{
+    margin-top:35px;
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:20px;
+}
+
+.chart-card h2{
+    color:#00E5FF;
+    margin-bottom:20px;
+}
+
+.weather-card{
+    margin-top:35px;
+    background:linear-gradient(135deg,#00E5FF,#2563EB);
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+}
+
+.weather-card h2{
+    margin-bottom:15px;
+}
+
+.weather-card h3{
+    font-size:45px;
+}
+
+footer{
+    margin-top:50px;
+    padding:25px;
+    text-align:center;
+    color:#ccc;
 }
