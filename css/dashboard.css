@@ -140,3 +140,86 @@ th{
     }
 
 }
+
+/* =========================
+   Light Mode
+========================= */
+
+body.light{
+    background:#f4f4f4;
+    color:#111;
+}
+
+/* Sidebar */
+
+body.light .sidebar{
+    background:#ffffff;
+    color:#111;
+    box-shadow:0 0 15px rgba(0,0,0,.1);
+}
+
+body.light .sidebar h2{
+    color:#2563EB;
+}
+
+body.light .sidebar a{
+    color:#111;
+}
+
+body.light .sidebar a:hover{
+    background:#2563EB;
+    color:white;
+}
+
+/* Main */
+
+body.light .main{
+    background:transparent;
+}
+
+/* Topbar */
+
+body.light .topbar{
+    background:#ffffff;
+    color:#111;
+}
+
+/* Cards */
+
+body.light .card{
+    background:#ffffff;
+    color:#111;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+body.light .card h2{
+    color:#2563EB;
+}
+
+/* Matches Table */
+
+body.light .recent-matches{
+    background:#ffffff;
+    color:#111;
+}
+
+body.light table{
+    background:white;
+    color:#111;
+}
+
+body.light th{
+    background:#2563EB;
+    color:white;
+}
+
+body.light td{
+    color:#111;
+}
+
+/* Theme Button */
+
+body.light #themeBtn{
+    background:#2563EB;
+    color:white;
+}
