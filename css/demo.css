@@ -479,3 +479,49 @@ Toast Notification
     transition:transform .08s linear;
 
 }
+
+.weather-panel{
+
+    width:90%;
+
+    margin:40px auto;
+
+    padding:30px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+}
+
+.weather-panel h1{
+
+    color:#00E5FF;
+
+    margin-bottom:15px;
+
+}
+
+.weather-panel h2{
+
+    font-size:45px;
+
+}
+
+.card{
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px) scale(1.04);
+
+    box-shadow:0 0 35px rgba(0,229,255,.6);
+
+}
