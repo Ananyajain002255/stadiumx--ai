@@ -310,3 +310,43 @@ document.addEventListener("mousemove",function(e){
     glow.style.top=e.clientY-12+"px";
 
 });
+
+window.addEventListener("load", function () {
+
+    confetti({
+
+        particleCount: 180,
+
+        spread: 90,
+
+        origin: { y: 0.6 }
+
+    });
+
+});
+
+if (navigator.geolocation) {
+
+    navigator.geolocation.getCurrentPosition(function(position){
+
+        const lat = position.coords.latitude;
+
+        const lon = position.coords.longitude;
+
+        fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m`)
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            document.getElementById("weatherTemp").innerHTML =
+                data.current.temperature_2m + "°C";
+
+            document.getElementById("weatherCity").innerHTML =
+                "Live Weather";
+
+        });
+
+    });
+
+}
