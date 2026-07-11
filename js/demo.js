@@ -174,3 +174,55 @@ animateCounter("revenueCount", 24, "₹", "L");
 animateCounter("visitorCount", 65, "", "K");
 
 animateCounter("accuracyCount", 97, "", "%");
+
+// ======================
+// AI Assistant
+// ======================
+
+document.getElementById("aiAssistant").onclick = function(){
+
+    alert("🤖 AI Assistant\n\nWelcome to StadiumX AI!\n\nThis feature will soon provide smart stadium assistance.");
+
+};
+
+// ======================
+// Toast Notifications
+// ======================
+
+const messages = [
+
+"🎟 New Ticket Booking Received",
+
+"📊 Revenue Updated",
+
+"🤖 AI Generated New Insight",
+
+"🌤 Weather Updated",
+
+"🏆 New Tournament Scheduled",
+
+"🚗 Parking Status Updated"
+
+];
+
+function showToast(){
+
+    const toast = document.getElementById("toast");
+
+    const random = Math.floor(Math.random()*messages.length);
+
+    toast.innerHTML = messages[random];
+
+    toast.style.right = "30px";
+
+    setTimeout(function(){
+
+        toast.style.right = "-350px";
+
+    },3000);
+
+}
+
+setInterval(showToast,5000);
+
+showToast();
