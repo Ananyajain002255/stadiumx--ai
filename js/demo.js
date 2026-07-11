@@ -226,3 +226,77 @@ function showToast(){
 setInterval(showToast,5000);
 
 showToast();
+
+const ctx = document.getElementById("visitorChart");
+
+new Chart(ctx,{
+
+    type:"line",
+
+    data:{
+
+        labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+
+        datasets:[{
+
+            label:"Visitors",
+
+            data:[1200,1800,1500,2400,3000,4200,3900],
+
+            borderColor:"#00E5FF",
+
+            backgroundColor:"rgba(0,229,255,.2)",
+
+            fill:true,
+
+            tension:.4
+
+        }]
+
+    },
+
+    options:{
+
+        responsive:true,
+
+        plugins:{
+
+            legend:{
+
+                labels:{
+
+                    color:"white"
+
+                }
+
+            }
+
+        },
+
+        scales:{
+
+            x:{
+
+                ticks:{
+
+                    color:"white"
+
+                }
+
+            },
+
+            y:{
+
+                ticks:{
+
+                    color:"white"
+
+                }
+
+            }
+
+        }
+
+    }
+
+});
