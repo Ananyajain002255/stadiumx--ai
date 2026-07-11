@@ -288,3 +288,8 @@ particlesJS("particles-js",{
     }
 
 });
+
+AOS.init({
+    duration:1000,
+    once:true
+});
