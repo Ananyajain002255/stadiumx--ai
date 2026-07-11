@@ -205,3 +205,25 @@ document.getElementById("alertBtn").onclick=function(){
 document.getElementById("temperature").innerHTML="32°C";
 
 document.getElementById("weatherStatus").innerHTML="Sunny";
+
+// ======================
+// Loading Screen
+// ======================
+
+window.addEventListener("load",function(){
+
+    setTimeout(function(){
+
+        const loader=document.getElementById("loader");
+
+        loader.style.opacity="0";
+
+        setTimeout(function(){
+
+            loader.style.display="none";
+
+        },800);
+
+    },1800);
+
+});
