@@ -137,3 +137,40 @@ setInterval(function(){
     }
 
 },3000);
+
+// ======================
+// Animated Counters
+// ======================
+
+function animateCounter(id, target, prefix = "", suffix = "") {
+
+    let count = 0;
+
+    const step = target / 100;
+
+    const counter = setInterval(function () {
+
+        count += step;
+
+        if (count >= target) {
+
+            count = target;
+
+            clearInterval(counter);
+
+        }
+
+        document.getElementById(id).innerHTML =
+            prefix + Math.floor(count) + suffix;
+
+    }, 20);
+
+}
+
+animateCounter("matchCount", 24);
+
+animateCounter("revenueCount", 24, "₹", "L");
+
+animateCounter("visitorCount", 65, "", "K");
+
+animateCounter("accuracyCount", 97, "", "%");
