@@ -485,3 +485,9 @@ footer{
     height:100%;
     z-index:-1;
 }
+
+.sidebar,
+.main{
+    position:relative;
+    z-index:2;
+}
