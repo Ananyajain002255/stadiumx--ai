@@ -251,3 +251,40 @@ function typingEffect(){
 }
 
 typingEffect();
+
+particlesJS("particles-js",{
+
+    particles:{
+        number:{
+            value:70
+        },
+
+        color:{
+            value:"#00E5FF"
+        },
+
+        shape:{
+            type:"circle"
+        },
+
+        opacity:{
+            value:0.4
+        },
+
+        size:{
+            value:3
+        },
+
+        move:{
+            enable:true,
+            speed:2
+        },
+
+        line_linked:{
+            enable:true,
+            color:"#00E5FF",
+            opacity:0.2
+        }
+    }
+
+});
