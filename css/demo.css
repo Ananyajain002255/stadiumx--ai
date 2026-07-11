@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#050816,#07162f,#0f172a);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.hero h1{
+    font-size:70px;
+    color:#00E5FF;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    width:70%;
+    font-size:20px;
+    color:#ddd;
+    margin-bottom:35px;
+}
+
+.homeBtn{
+    text-decoration:none;
+    background:#2563EB;
+    color:white;
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:18px;
+    transition:.4s;
+}
+
+.homeBtn:hover{
+    background:#00E5FF;
+    color:black;
+    transform:scale(1.05);
+}
+
+/* Features */
+
+.features{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:60px 0;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:30px;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px #00E5FF;
+}
+
+.card h2{
+    color:#00E5FF;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#ddd;
+    line-height:1.7;
+}
+
+/* Stats */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    width:90%;
+    margin:60px auto;
+}
+
+.stat{
+    background:linear-gradient(135deg,#182848,#4b6cb7);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.4s;
+}
+
+.stat:hover{
+    transform:scale(1.05);
+}
+
+.stat h1{
+    font-size:45px;
+    color:#00E5FF;
+}
+
+/* Workflow */
+
+.workflow{
+    width:90%;
+    margin:80px auto;
+    text-align:center;
+}
+
+.workflow h1{
+    color:#00E5FF;
+    margin-bottom:40px;
+}
+
+.steps{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:40px;
+    font-size:24px;
+    line-height:2;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#ccc;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero h2{
+    font-size:28px;
+}
+
+.hero p{
+    width:95%;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+}
