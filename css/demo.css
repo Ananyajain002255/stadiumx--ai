@@ -253,3 +253,89 @@ footer{
     z-index:2;
 
 }
+
+/* ======================
+AI Panel
+====================== */
+
+.ai-panel{
+
+    width:90%;
+    margin:70px auto;
+    text-align:center;
+
+}
+
+.ai-box{
+
+    margin-top:25px;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 0 25px rgba(0,229,255,.25);
+
+}
+
+.ai-box h2{
+
+    color:#00E5FF;
+
+    margin-bottom:15px;
+
+}
+
+/* ======================
+Activity Feed
+====================== */
+
+.activity-feed{
+
+    width:90%;
+
+    margin:70px auto;
+
+}
+
+.activity-feed h1{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#00E5FF;
+
+}
+
+.activity-feed ul{
+
+    list-style:none;
+
+}
+
+.activity-feed li{
+
+    background:rgba(255,255,255,.08);
+
+    margin:15px 0;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+.activity-feed li:hover{
+
+    transform:translateX(10px);
+
+    box-shadow:0 0 20px #00E5FF;
+
+}
