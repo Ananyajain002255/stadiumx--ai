@@ -8,6 +8,8 @@ const table = document.getElementById("tournamentTable");
 
 createBtn.addEventListener("click", function(){
 
+    console.log("Button Clicked");
+
     if(
         nameInput.value === "" ||
         venueInput.value === "" ||
@@ -46,6 +48,8 @@ let tournaments = JSON.parse(localStorage.getItem("tournaments")) || [];
 renderTable();
 
 function renderTable(){
+
+    console.log(tournaments);
 
     table.innerHTML = "";
 
