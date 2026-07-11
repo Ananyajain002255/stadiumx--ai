@@ -73,20 +73,6 @@
 
 </div>
 
-<div class="occupancy">
-
-    <h2>🏟 Stadium Occupancy</h2>
-
-    <div class="progress-bar">
-
-        <div class="progress" id="progressBar">
-            78%
-        </div>
-
-    </div>
-
-</div>
-
 <div class="card">
 
         <h2 id="revenue">₹0</h2>
@@ -108,8 +94,6 @@
         <h2 id="accuracy">97%</h2>
 
         <p>AI Accuracy</p>
-
-</div>
 
 </div>
 
@@ -161,11 +145,17 @@
 
 <div class="quick-actions">
 
-<button>➕ Add Match</button>
+<button id="addMatchBtn">
+    ➕ Add Match
+</button>
 
-<button>📄 Export Report</button>
+<button id="exportBtn">
+    📄 Export Report
+</button>
 
-<button>📧 Send Alert</button>
+<button id="alertBtn">
+    📧 Send Alert
+</button>
 
 </div>
 
@@ -197,28 +187,36 @@ Sunny
 
     <table>
 
-        <tr>
-            <th>Match</th>
-            <th>Date</th>
-            <th>Venue</th>
-            <th>Status</th>
-        </tr>
+<thead>
 
-        <tr>
-            <td>India vs Australia</td>
-            <td>15 July</td>
-            <td>Main Stadium</td>
-            <td>Scheduled</td>
-        </tr>
+<tr>
+    <th>Match</th>
+    <th>Date</th>
+    <th>Venue</th>
+    <th>Status</th>
+</tr>
 
-        <tr>
-            <td>Brazil vs Argentina</td>
-            <td>18 July</td>
-            <td>Arena 2</td>
-            <td>Scheduled</td>
-        </tr>
+</thead>
 
-    </table>
+<tbody>
+
+<tr>
+    <td>India vs Australia</td>
+    <td>15 July</td>
+    <td>Main Stadium</td>
+    <td>Scheduled</td>
+</tr>
+
+<tr>
+    <td>Brazil vs Argentina</td>
+    <td>18 July</td>
+    <td>Arena 2</td>
+    <td>Scheduled</td>
+</tr>
+
+</tbody>
+
+</table>
 
 </section>
 
@@ -231,6 +229,8 @@ Sunny
 </p>
 
 </footer>
+
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
