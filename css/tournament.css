@@ -13,6 +13,7 @@ body{
 }
 
 header{
+    position:relative;
     text-align:center;
     margin-bottom:40px;
 }
@@ -143,4 +144,39 @@ tbody tr:hover{
 .finished{
     color:#ef4444;
     font-weight:bold;
+}
+
+#themeBtn{
+    position:absolute;
+    top:0;
+    right:0;
+    width:auto;
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    background:#FFD700;
+    color:black;
+}
+
+#themeBtn:hover{
+    background:#FFC107;
+}
+
+body.light{
+    background:#f4f4f4;
+    color:#111;
+}
+
+body.light .form-card,
+body.light .table-card{
+    background:white;
+    color:#111;
+}
+
+body.light header h1{
+    color:#2563EB;
+}
+
+body.light header p{
+    color:#444;
 }
