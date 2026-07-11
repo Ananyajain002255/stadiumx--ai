@@ -56,3 +56,84 @@ particlesJS("particles-js", {
     }
 
 });
+
+// ======================
+// AI Status
+// ======================
+
+const aiMessages=[
+
+"Analyzing Crowd...",
+
+"Predicting Traffic...",
+
+"Checking Weather...",
+
+"Monitoring Security...",
+
+"Generating Insights...",
+
+"Stadium Ready ✅"
+
+];
+
+let aiIndex=0;
+
+setInterval(function(){
+
+    aiIndex++;
+
+    if(aiIndex>=aiMessages.length){
+
+        aiIndex=0;
+
+    }
+
+    document.getElementById("aiStatus").innerHTML=aiMessages[aiIndex];
+
+},2500);
+
+
+// ======================
+// Live Activity Feed
+// ======================
+
+const activities=[
+
+"🎟 210 tickets booked",
+
+"🚗 Parking updated",
+
+"🤖 AI detected high crowd",
+
+"🌤 Weather synchronized",
+
+"📊 Revenue increased",
+
+"🏟 Stadium occupancy reached 82%",
+
+"🚓 Security check completed",
+
+"💺 VIP seats almost full"
+
+];
+
+setInterval(function(){
+
+    const random=Math.floor(Math.random()*activities.length);
+
+    const list=document.getElementById("activityList");
+
+    const item=document.createElement("li");
+
+    item.innerHTML=activities[random];
+
+    list.prepend(item);
+
+    if(list.children.length>6){
+
+        list.removeChild(list.lastChild);
+
+    }
+
+},3000);
