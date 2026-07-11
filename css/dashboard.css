@@ -52,17 +52,14 @@ padding:40px;
 }
 
 .topbar{
-background:rgba(255,255,255,.06);
-padding:20px;
-border-radius:20px;
-backdrop-filter:blur(15px);
-margin-bottom:40px;
-}
-
-.topbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,.06);
+    padding:20px;
+    border-radius:20px;
+    backdrop-filter:blur(15px);
+    margin-bottom:40px;
 }
 
 .topbar-right{
@@ -139,7 +136,9 @@ th,td{
 th{
     color:#00E5FF;
 }
+
 #themeBtn{
+    position:static;
     width:auto;
     padding:10px 18px;
     border:none;
