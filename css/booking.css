@@ -356,6 +356,14 @@ body.light{
     color:#111;
 }
 
+body.light .legend{
+    color:#111;
+}
+
+body.light .legend .box{
+    border:1px solid #999;
+}
+
 body.light .match-card,
 body.light .summary{
     background:white;
@@ -382,6 +390,19 @@ body.light .popup-content{
     background:#ffffff;
 }
 
+body.light input{
+    background:#f8fafc;
+    color:#111;
+}
+
+body.light button{
+    color:black;
+}
+
+body.light .seat.booked{
+    background:#9ca3af;
+}
+
 .thank-you{
     margin-top:15px;
     color:#16a34a;
@@ -390,4 +411,24 @@ body.light .popup-content{
 }
 body.light .popup-content{
     border-color:#60A5FA;
+}
+
+body.light .vip{
+    background:#FFD700;
+    color:black;
+}
+
+body.light .premium{
+    background:#FF9800;
+    color:white;
+}
+
+body.light .normal{
+    background:#2563EB;
+    color:white;
+}
+
+body.light .seat.selected{
+    background:#00C853;
+    color:white;
 }
