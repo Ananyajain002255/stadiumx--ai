@@ -421,3 +421,37 @@ Toast Notification
     box-shadow:0 0 20px rgba(0,0,0,.3);
 
 }
+
+.visitor-chart{
+
+    width:90%;
+
+    margin:70px auto;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+}
+
+.visitor-chart h1{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#00E5FF;
+
+}
+
+#visitorChart{
+
+    width:100%;
+
+    max-height:400px;
+
+}
