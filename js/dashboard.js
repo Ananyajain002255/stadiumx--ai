@@ -227,3 +227,27 @@ window.addEventListener("load",function(){
     },1800);
 
 });
+
+// ======================
+// Typing Effect
+// ======================
+
+const text = "Welcome Back, Admin 👋";
+
+let i = 0;
+
+function typingEffect(){
+
+    if(i < text.length){
+
+        document.getElementById("typingText").innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typingEffect,100);
+
+    }
+
+}
+
+typingEffect();
