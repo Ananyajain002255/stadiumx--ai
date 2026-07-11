@@ -39,6 +39,7 @@ dateInput.value = "";
 teamsInput.value = "";
 
 alert("✅ Tournament Created Successfully");
+nameInput.focus();
 
 console.log(tournaments);
 });
