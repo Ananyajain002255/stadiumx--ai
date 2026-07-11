@@ -47,6 +47,10 @@
 
     <div class="topbar-right">
 
+        <div id="clock">
+            00:00:00
+        </div>
+
         <button id="themeBtn">
             🌙 Dark Mode
         </button>
@@ -97,6 +101,82 @@
 
 </div>
 
+<div class="occupancy">
+
+    <h2>🏟 Stadium Occupancy</h2>
+
+    <div class="progress">
+
+        <div class="progress-fill" id="progressFill">
+
+            0%
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="prediction-card">
+
+    <h2>🤖 AI Prediction</h2>
+
+    <p id="predictionText">
+
+        High Crowd Expected Today
+
+    </p>
+
+</div>
+
+<div class="notification-panel">
+
+<h2>🔔 Notifications</h2>
+
+<ul>
+
+<li>India vs Australia starts in 2 Days</li>
+
+<li>VIP Tickets Almost Sold Out</li>
+
+<li>Parking Gate 2 Open</li>
+
+</ul>
+
+</div>
+
+<div class="quick-actions">
+
+<button>➕ Add Match</button>
+
+<button>📄 Export Report</button>
+
+<button>📧 Send Alert</button>
+
+</div>
+
+<div class="chart-card">
+
+<h2>📊 Revenue Chart</h2>
+
+<canvas id="revenueChart"></canvas>
+
+</div>
+
+<div class="weather-card">
+
+<h2>🌤 Stadium Weather</h2>
+
+<h3 id="temperature">
+32°C
+</h3>
+
+<p id="weatherStatus">
+Sunny
+</p>
+
+</div>
+
 <section class="recent-matches">
 
     <h2>Upcoming Matches</h2>
@@ -127,6 +207,18 @@
     </table>
 
 </section>
+
+<footer>
+
+<p>
+
+© 2026 StadiumX AI | Smart Stadium & Tournament Operations
+
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
 <script src="js/dashboard.js"></script>
 
