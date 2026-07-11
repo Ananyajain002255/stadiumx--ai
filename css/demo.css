@@ -455,3 +455,27 @@ Toast Notification
     max-height:400px;
 
 }
+
+#cursorGlow{
+
+    position:fixed;
+
+    width:25px;
+
+    height:25px;
+
+    border-radius:50%;
+
+    background:#00E5FF;
+
+    pointer-events:none;
+
+    filter:blur(10px);
+
+    opacity:.8;
+
+    z-index:9999;
+
+    transition:transform .08s linear;
+
+}
