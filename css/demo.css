@@ -339,3 +339,85 @@ Activity Feed
     box-shadow:0 0 20px #00E5FF;
 
 }
+
+/* ===========================
+AI Floating Button
+=========================== */
+
+.ai-assistant{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#00E5FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+    box-shadow:0 0 25px #00E5FF;
+
+    animation:float 2s ease-in-out infinite;
+
+    z-index:999;
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+Toast Notification
+=========================== */
+
+.toast{
+
+    position:fixed;
+
+    top:30px;
+
+    right:-350px;
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:16px 25px;
+
+    border-radius:12px;
+
+    transition:.5s;
+
+    z-index:9999;
+
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+
+}
