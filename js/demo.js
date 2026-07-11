@@ -300,3 +300,13 @@ new Chart(ctx,{
     }
 
 });
+
+const glow=document.getElementById("cursorGlow");
+
+document.addEventListener("mousemove",function(e){
+
+    glow.style.left=e.clientX-12+"px";
+
+    glow.style.top=e.clientY-12+"px";
+
+});
