@@ -3,57 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StadiumX AI Demo</title>
+
+<title>StadiumX AI | Demo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Poppins,sans-serif;
-    background:#050816;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    flex-direction:column;
+background:linear-gradient(135deg,#050816,#0f172a);
+color:white;
+padding:40px;
 }
 
 h1{
-    color:#00E5FF;
-    margin-bottom:20px;
+text-align:center;
+font-size:50px;
+color:#00E5FF;
+margin-bottom:10px;
 }
 
-iframe{
-    width:900px;
-    max-width:90%;
-    height:500px;
-    border:none;
-    border-radius:20px;
-    box-shadow:0 0 30px rgba(0,229,255,.5);
+.subtitle{
+text-align:center;
+color:#ccc;
+margin-bottom:50px;
 }
 
-a{
-    margin-top:25px;
-    text-decoration:none;
-    color:white;
-    background:#2563EB;
-    padding:12px 25px;
-    border-radius:10px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:20px;
+transition:.4s;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(0,229,255,.5);
+}
+
+.card h2{
+color:#00E5FF;
+margin-bottom:15px;
+}
+
+.card p{
+line-height:1.6;
+color:#ddd;
+}
+
+.back{
+display:block;
+width:220px;
+margin:50px auto;
+text-align:center;
+background:#2563EB;
+color:white;
+padding:15px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.back:hover{
+background:#00E5FF;
+color:black;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<h1>🎥 StadiumX AI Demo</h1>
+<h1>🏟 StadiumX AI Demo</h1>
 
-<iframe
-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-allowfullscreen>
-</iframe>
+<p class="subtitle">
+Experience the future of Smart Stadium Management
+</p>
 
-<a href="index.html">⬅ Back to Home</a>
+<div class="grid">
+
+<div class="card">
+<h2>🎟 Smart Ticket Booking</h2>
+<p>
+AI-based ticket booking with instant seat availability and dynamic pricing.
+</p>
+</div>
+
+<div class="card">
+<h2>📊 Live Dashboard</h2>
+<p>
+Monitor revenue, visitors, occupancy and AI predictions in real time.
+</p>
+</div>
+
+<div class="card">
+<h2>🤖 AI Prediction</h2>
+<p>
+Predict crowd levels, traffic and stadium occupancy using AI.
+</p>
+</div>
+
+<div class="card">
+<h2>🌦 Weather Monitoring</h2>
+<p>
+Real-time weather updates help improve match planning and safety.
+</p>
+</div>
+
+<div class="card">
+<h2>🏆 Tournament Manager</h2>
+<p>
+Schedule matches, manage teams and organize tournaments effortlessly.
+</p>
+</div>
+
+<div class="card">
+<h2>📈 Analytics</h2>
+<p>
+Visual reports for revenue, attendance and overall stadium performance.
+</p>
+</div>
+
+</div>
+
+<a href="index.html" class="back">
+⬅ Back to Home
+</a>
 
 </body>
 </html>
