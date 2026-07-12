@@ -311,15 +311,12 @@ box-shadow:0 0 80px #00E5FF;
 ========================= */
 
 #typingTitle{
-
     font-size:70px;
     line-height:80px;
     color:white;
     border-right:4px solid #00E5FF;
-    white-space:nowrap;
-    overflow:hidden;
+    display:inline-block;
     animation:blink .8s infinite;
-
 }
 
 @keyframes blink{
