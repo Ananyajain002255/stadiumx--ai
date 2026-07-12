@@ -607,16 +607,27 @@ justify-content:center;
 /* Cursor Glow */
 
 #cursorGlow{
+
     position:fixed;
-    width:160px;
-    height:160px;
+
+    width:25px;
+
+    height:25px;
+
     border-radius:50%;
+
+    background:#00E5FF;
+
     pointer-events:none;
-    transform:translate(-50%,-50%);
+
+    filter:blur(10px);
+
+    opacity:.8;
+
     z-index:9999;
 
-    background:rgba(0,229,255,.18);
-    filter:blur(40px);
+    transition:transform .08s linear;
+
 }
 
 /* Floating AI Assistant */
