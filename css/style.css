@@ -608,14 +608,15 @@ justify-content:center;
 
 #cursorGlow{
     position:fixed;
-    width:25px;
-    height:25px;
+    width:160px;
+    height:160px;
     border-radius:50%;
-    background:#00E5FF;
-    box-shadow:0 0 30px #00E5FF;
     pointer-events:none;
-    z-index:9999;
     transform:translate(-50%,-50%);
+    z-index:9999;
+
+    background:rgba(0,229,255,.18);
+    filter:blur(40px);
 }
 
 /* Floating AI Assistant */
