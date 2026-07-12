@@ -607,3 +607,84 @@ justify-content:center;
 
 }
 
+/* Cursor Glow */
+
+#cursorGlow{
+    position:fixed;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:#00E5FF;
+    box-shadow:0 0 30px #00E5FF;
+    pointer-events:none;
+    z-index:9999;
+    transform:translate(-50%,-50%);
+}
+
+/* Floating AI Assistant */
+
+.ai-assistant{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#00E5FF;
+    color:black;
+    font-size:35px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    box-shadow:0 0 30px #00E5FF;
+    animation:floatAI 2s infinite ease-in-out;
+    z-index:1000;
+}
+
+@keyframes floatAI{
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+/* Toast */
+
+.toast{
+    position:fixed;
+    top:30px;
+    right:-350px;
+    background:#00E5FF;
+    color:black;
+    padding:15px 25px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.6s;
+    z-index:9999;
+}
+
+.toast.show{
+    right:30px;
+}
+
+/* Premium Navbar */
+
+.navbar{
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+/* Premium Cards */
+
+.card,
+.feature-card{
+    transition:.4s;
+}
+
+.card:hover,
+.feature-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 0 35px rgba(0,229,255,.5);
+}
