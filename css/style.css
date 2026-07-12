@@ -237,3 +237,373 @@ box-shadow:0 0 80px #00E5FF;
     color:#d1d5db;
     font-size:18px;
 }
+
+/* =========================
+   Premium Background
+========================= */
+
+#particles-js{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* =========================
+   Loading Screen
+========================= */
+
+#loader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#050816;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:opacity .8s;
+}
+
+.loader-content{
+    text-align:center;
+}
+
+.loader-circle{
+    width:90px;
+    height:90px;
+    border:8px solid rgba(255,255,255,.2);
+    border-top:8px solid #00E5FF;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+    margin:auto;
+}
+
+.loader-content h2{
+    margin-top:20px;
+    color:#00E5FF;
+    font-size:35px;
+}
+
+.loader-content p{
+    color:#ccc;
+    margin-top:10px;
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* =========================
+   Typing Title
+========================= */
+
+#typingTitle{
+
+    font-size:70px;
+    line-height:80px;
+    color:white;
+    border-right:4px solid #00E5FF;
+    white-space:nowrap;
+    overflow:hidden;
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+border-color:transparent;
+
+}
+
+}
+
+/* =========================
+   Live AI Badge
+========================= */
+
+.live-ai{
+
+display:inline-block;
+
+margin-bottom:35px;
+
+padding:12px 25px;
+
+background:rgba(0,229,255,.15);
+
+border:1px solid #00E5FF;
+
+border-radius:40px;
+
+color:#00E5FF;
+
+font-weight:bold;
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 rgba(0,229,255,.3);
+
+}
+
+50%{
+
+box-shadow:0 0 25px rgba(0,229,255,.8);
+
+}
+
+100%{
+
+box-shadow:0 0 0 rgba(0,229,255,.3);
+
+}
+
+}
+
+/* =========================
+   Feature Section
+========================= */
+
+.features{
+
+padding:80px;
+
+text-align:center;
+
+}
+
+.features h1{
+
+font-size:45px;
+
+margin-bottom:50px;
+
+color:#00E5FF;
+
+}
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.feature-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+padding:35px;
+
+border-radius:20px;
+
+transition:.4s;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 0 35px rgba(0,229,255,.5);
+
+}
+
+.feature-card h2{
+
+margin-bottom:20px;
+
+color:#00E5FF;
+
+}
+
+.feature-card p{
+
+color:#d1d5db;
+
+line-height:28px;
+
+}
+
+/* =========================
+   Dashboard Preview
+========================= */
+
+.preview{
+
+padding:80px;
+
+text-align:center;
+
+}
+
+.preview h1{
+
+margin-bottom:40px;
+
+font-size:45px;
+
+color:#00E5FF;
+
+}
+
+.preview img{
+
+width:90%;
+
+border-radius:25px;
+
+box-shadow:0 0 50px rgba(0,229,255,.4);
+
+transition:.5s;
+
+}
+
+.preview img:hover{
+
+transform:scale(1.02);
+
+}
+
+/* =========================
+   Premium Buttons
+========================= */
+
+.primary,
+.secondary{
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.primary:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 30px #00E5FF;
+
+}
+
+.secondary:hover{
+
+background:#00E5FF;
+
+color:black;
+
+}
+
+/* =========================
+   Floating Stadium
+========================= */
+
+.circle{
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.left,
+.right{
+
+width:100%;
+
+}
+
+.left{
+
+margin-bottom:50px;
+
+}
+
+.left h1,
+#typingTitle{
+
+font-size:45px;
+
+line-height:55px;
+
+}
+
+.navbar{
+
+padding:20px;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.navbar ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
+
