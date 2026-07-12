@@ -697,3 +697,35 @@ justify-content:center;
     transform:translateY(-12px) scale(1.03);
     box-shadow:0 0 35px rgba(0,229,255,.5);
 }
+
+.trusted{
+    padding:80px;
+    text-align:center;
+}
+
+.trusted h1{
+    font-size:40px;
+    margin-bottom:40px;
+    color:#00E5FF;
+}
+
+.trusted-logos{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.trusted-logos div{
+    padding:25px 40px;
+    background:rgba(255,255,255,.08);
+    border-radius:20px;
+    transition:.4s;
+    font-size:22px;
+    font-weight:600;
+}
+
+.trusted-logos div:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00E5FF;
+}
