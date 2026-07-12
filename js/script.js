@@ -280,3 +280,16 @@ document.getElementById("ticketStatus").innerHTML =
 ticket[Math.floor(Math.random()*ticket.length)];
 
 },2500);
+
+setTimeout(function(){
+
+document.getElementById("crowdBar").style.width="91%";
+document.getElementById("crowdBar").innerHTML="91%";
+
+document.getElementById("revenueBar").style.width="84%";
+document.getElementById("revenueBar").innerHTML="84%";
+
+document.getElementById("securityBar").style.width="99%";
+document.getElementById("securityBar").innerHTML="99%";
+
+},800);
