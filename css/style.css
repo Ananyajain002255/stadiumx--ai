@@ -812,3 +812,63 @@ summary{
     margin-bottom:40px;
     font-size:20px;
 }
+
+/* ===========================
+AI Command Center
+=========================== */
+
+.command-center{
+
+padding:90px 8%;
+text-align:center;
+
+}
+
+.command-center h1{
+
+font-size:45px;
+margin-bottom:50px;
+color:#00E5FF;
+
+}
+
+.command-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+.command-card{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:20px;
+padding:35px;
+transition:.4s;
+cursor:pointer;
+
+}
+
+.command-card:hover{
+
+transform:translateY(-12px);
+box-shadow:0 0 30px #00E5FF;
+
+}
+
+.command-card h2{
+
+margin-bottom:15px;
+
+}
+
+.command-card p{
+
+font-size:18px;
+color:#00E5FF;
+font-weight:bold;
+
+}
