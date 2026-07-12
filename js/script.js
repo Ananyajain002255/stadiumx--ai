@@ -240,3 +240,43 @@ document.getElementById("aiAssistant").onclick = function(){
     alert("🤖 AI Assistant Coming Soon!");
 
 };
+
+const crowd = [
+"🟢 Normal",
+"🟡 Medium",
+"🔴 High Crowd"
+];
+
+const security = [
+"✅ Secure",
+"🚓 Monitoring",
+"🛰 AI Active"
+];
+
+const weather = [
+"☀ Sunny",
+"🌦 Cloudy",
+"🌧 Rain Alert"
+];
+
+const ticket = [
+"92% Sold",
+"95% Sold",
+"VIP Full"
+];
+
+setInterval(()=>{
+
+document.getElementById("crowdStatus").innerHTML =
+crowd[Math.floor(Math.random()*crowd.length)];
+
+document.getElementById("securityStatus").innerHTML =
+security[Math.floor(Math.random()*security.length)];
+
+document.getElementById("weatherStatus").innerHTML =
+weather[Math.floor(Math.random()*weather.length)];
+
+document.getElementById("ticketStatus").innerHTML =
+ticket[Math.floor(Math.random()*ticket.length)];
+
+},2500);
