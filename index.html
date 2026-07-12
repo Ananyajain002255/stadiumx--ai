@@ -11,13 +11,25 @@
 
 <link rel="stylesheet" href="css/style.css">
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <div class="loader-circle"></div>
+
+        <h2>🏟 StadiumX AI</h2>
+
+        <p>Loading Platform...</p>
+
+    </div>
+
+</div>
 
 <div id="particles-js"></div>
 
@@ -52,15 +64,7 @@
 
 <div class="left">
 
-<h1>
-
-Future of
-
-<br>
-
-Smart Stadiums
-
-</h1>
+<h1 id="typingTitle"></h1>
 
 <p>
 
@@ -77,6 +81,12 @@ Revenue Dashboard
 and Smart Stadium Operations.
 
 </p>
+
+<div class="live-ai">
+
+🟢 AI Running • Crowd Prediction Active
+
+</div>
 
 <div class="buttons">
 
@@ -107,26 +117,66 @@ Explore Platform
 <section class="stats">
 
     <div class="card">
-        <h2>24</h2>
+        <h2 id="matchCounter">0</h2>
         <p>Live Matches</p>
     </div>
 
     <div class="card">
-        <h2>₹2.4M</h2>
+        <h2 id="revenueCounter">₹0</h2>
         <p>Revenue</p>
     </div>
 
     <div class="card">
-        <h2>65K</h2>
+        <h2 id="visitorCounter">0</h2>
         <p>Visitors</p>
     </div>
 
     <div class="card">
-        <h2>97%</h2>
+        <h2 id="accuracyCounter">0%</h2>
         <p>AI Prediction</p>
     </div>
 
 </section>
+
+<section class="features">
+
+<h1>🚀 AI Powered Features</h1>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h2>🎟 Smart Ticket Booking</h2>
+<p>Book tickets instantly using AI seat recommendations.</p>
+</div>
+
+<div class="feature-card">
+<h2>🤖 Crowd Prediction</h2>
+<p>Predict crowd before every match using AI.</p>
+</div>
+
+<div class="feature-card">
+<h2>📊 Live Analytics</h2>
+<p>Monitor revenue and visitors in real time.</p>
+</div>
+
+<div class="feature-card">
+<h2>🌤 Weather Monitoring</h2>
+<p>Live weather updates for stadium management.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="preview">
+
+<h1>📊 Dashboard Preview</h1>
+
+<img src="https://placehold.co/1100x550/0F172A/00E5FF?text=StadiumX+AI+Dashboard" alt="Dashboard">
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   
 <script src="js/script.js"></script>
 
