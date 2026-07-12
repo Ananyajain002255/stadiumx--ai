@@ -201,3 +201,42 @@ links.forEach(link=>{
     });
 
 });
+
+// Cursor Glow
+
+const glow = document.getElementById("cursorGlow");
+
+document.addEventListener("mousemove", function(e){
+
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+
+});
+
+// Toast
+
+window.onload = function(){
+
+    const toast = document.getElementById("toast");
+
+    setTimeout(function(){
+
+        toast.classList.add("show");
+
+    },1000);
+
+    setTimeout(function(){
+
+        toast.classList.remove("show");
+
+    },5000);
+
+};
+
+// AI Assistant
+
+document.getElementById("aiAssistant").onclick = function(){
+
+    alert("🤖 AI Assistant Coming Soon!");
+
+};
