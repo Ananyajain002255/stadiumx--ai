@@ -75,7 +75,7 @@ function counter(id,target,prefix="",suffix=""){
 
 counter("matchCounter",24);
 counter("visitorCounter",65000);
-counter("revenueCounter",2400000,"₹");
+counter("revenueCounter",2.4,"₹","","M");
 counter("accuracyCounter",97,"","%");
 
 
