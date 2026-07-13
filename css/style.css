@@ -1259,3 +1259,48 @@ font-weight:bold;
 
 }
 
+/* ==========================
+Revenue Analytics
+========================== */
+
+.analytics-chart{
+
+padding:100px 8%;
+
+text-align:center;
+
+}
+
+.analytics-chart h1{
+
+font-size:45px;
+
+margin-bottom:50px;
+
+color:#00E5FF;
+
+}
+
+.chart-box{
+
+max-width:950px;
+
+margin:auto;
+
+padding:30px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:25px;
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 0 30px rgba(0,229,255,.25);
+
+}
+
+canvas{
+
+max-height:450px;
+
+}
