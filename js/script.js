@@ -293,3 +293,88 @@ document.getElementById("securityBar").style.width="99%";
 document.getElementById("securityBar").innerHTML="99%";
 
 },800);
+
+// ======================
+// AI Chat
+// ======================
+
+const assistant = document.getElementById("aiAssistant");
+const chatBox = document.getElementById("chatBox");
+
+assistant.onclick = function () {
+
+    if(chatBox.style.display==="block"){
+
+        chatBox.style.display="none";
+
+    }else{
+
+        chatBox.style.display="block";
+
+    }
+
+}
+
+function sendMessage(){
+
+    const input=document.getElementById("userInput");
+
+    const body=document.getElementById("chatBody");
+
+    if(input.value==="") return;
+
+    body.innerHTML+=`
+    <div class="user-msg">
+    ${input.value}
+    </div>
+    `;
+
+    let reply="AI is analyzing your request...";
+
+    const text=input.value.toLowerCase();
+
+    if(text.includes("ticket")){
+
+        reply="🎟 Smart Ticket Booking is available.";
+
+    }
+
+    else if(text.includes("weather")){
+
+        reply="🌤 Weather is Sunny (32°C).";
+
+    }
+
+    else if(text.includes("crowd")){
+
+        reply="👥 Crowd Prediction: 91% occupancy.";
+
+    }
+
+    else if(text.includes("dashboard")){
+
+        reply="📊 Dashboard is showing live analytics.";
+
+    }
+
+    else{
+
+        reply="🤖 Thank you! AI Assistant received your query.";
+
+    }
+
+    setTimeout(function(){
+
+        body.innerHTML+=`
+        <div class="bot-msg">
+        ${reply}
+        </div>
+        `;
+
+        body.scrollTop=body.scrollHeight;
+
+    },700);
+
+    input.value="";
+
+}
