@@ -462,3 +462,35 @@ grid:{color:"rgba(255,255,255,.1)"}
 });
 
 }
+
+//=========================
+// Back To Top
+//=========================
+
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>400){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
