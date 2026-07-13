@@ -1707,3 +1707,113 @@ transform:translateX(-100%);
 }
 
 }
+
+/*=========================
+Premium Footer
+=========================*/
+
+.footer{
+
+background:#07111f;
+
+padding:70px 8% 20px;
+
+margin-top:80px;
+
+}
+
+.footer-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:40px;
+
+}
+
+.footer h2,
+.footer h3{
+
+color:#00E5FF;
+
+margin-bottom:20px;
+
+}
+
+.footer p,
+.footer a{
+
+color:#cbd5e1;
+
+text-decoration:none;
+
+display:block;
+
+margin-bottom:12px;
+
+transition:.3s;
+
+}
+
+.footer a:hover{
+
+color:#00E5FF;
+
+transform:translateX(5px);
+
+}
+
+.footer-bottom{
+
+text-align:center;
+
+margin-top:40px;
+
+padding-top:20px;
+
+border-top:1px solid rgba(255,255,255,.1);
+
+}
+
+/*=========================
+Back To Top Button
+=========================*/
+
+#topBtn{
+
+position:fixed;
+
+bottom:30px;
+
+left:30px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#00E5FF;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 0 20px #00E5FF;
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+#topBtn:hover{
+
+transform:scale(1.1);
+
+}
