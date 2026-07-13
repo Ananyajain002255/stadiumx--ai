@@ -494,3 +494,39 @@ behavior:"smooth"
 });
 
 };
+
+//=========================
+// Dark / Light Mode
+//=========================
+
+const themeBtn=document.getElementById("themeToggle");
+
+// Load saved theme
+if(localStorage.getItem("theme")==="light"){
+
+document.body.classList.add("light");
+
+themeBtn.innerHTML="☀️";
+
+}
+
+themeBtn.onclick=function(){
+
+document.body.classList.toggle("light");
+
+if(document.body.classList.contains("light")){
+
+themeBtn.innerHTML="☀️";
+
+localStorage.setItem("theme","light");
+
+}else{
+
+themeBtn.innerHTML="🌙";
+
+localStorage.setItem("theme","dark");
+
+}
+
+}
+
