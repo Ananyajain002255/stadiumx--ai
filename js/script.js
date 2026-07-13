@@ -75,9 +75,8 @@ function counter(id,target,prefix="",suffix=""){
 
 counter("matchCounter",24);
 counter("visitorCounter",65000);
-counter("revenueCounter",2.4,"₹","","M");
 counter("accuracyCounter",97,"","%");
-
+document.getElementById("revenueCounter").innerHTML = "₹2.4M";
 
 // ===========================
 // Particles Background
