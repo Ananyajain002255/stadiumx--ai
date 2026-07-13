@@ -378,3 +378,87 @@ function sendMessage(){
     input.value="";
 
 }
+
+// ======================
+// Revenue Analytics
+// ======================
+
+const chartCanvas = document.getElementById("revenueChart");
+
+if(chartCanvas){
+
+const ctx = chartCanvas.getContext("2d");
+
+new Chart(ctx,{
+
+type:"line",
+
+data:{
+
+labels:["Jan","Feb","Mar","Apr","May","Jun","Jul"],
+
+datasets:[{
+
+label:"Revenue (₹ Lakhs)",
+
+data:[12,18,15,25,31,28,40],
+
+borderColor:"#00E5FF",
+
+backgroundColor:"rgba(0,229,255,.15)",
+
+fill:true,
+
+tension:.4,
+
+borderWidth:4,
+
+pointRadius:5
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+plugins:{
+
+legend:{
+
+labels:{
+
+color:"white"
+
+}
+
+}
+
+},
+
+scales:{
+
+x:{
+
+ticks:{color:"white"},
+
+grid:{color:"rgba(255,255,255,.1)"}
+
+},
+
+y:{
+
+ticks:{color:"white"},
+
+grid:{color:"rgba(255,255,255,.1)"}
+
+}
+
+}
+
+}
+
+});
+
+}
